@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Firebase CRUD OPERATIONS</title>
+    <script src="index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+      var config = {
+        apiKey: "api-key",
+        authDomain: "project-id.firebaseapp.com",
+        databaseUrl: "https://project-id.firebaseio.com",
+        projectId: "project-id",
+        storageBucket: "project-id.appspot.com",
+        messagingSenderId: "sender-id"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+
+  <body>
+    <center>
+      <h2>Firebase CRUD Operations Demo</h2>
+      <br /><br />
+      ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+        type="text"
+        id="id"
+        placeholder="Enter your id"
+      /><br /><br />
+      NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+        type="text"
+        id="name"
+        placeholder="Enter your name"
+      /><br /><br />
+      BRANCH&nbsp;&nbsp;<input
+        type="text"
+        id="branch"
+        placeholder="Enter your branch"
+      /><br /><br />
+      <input type="button" value="Create" onclick="create()" />
+      <input type="button" value="Read" onclick="read()" />
+      <input type="button" value="Update" onclick="update()" />
+      <input type="button" value="Delete" onclick="del()" />
+    </center>
+  </body>
+</html>
